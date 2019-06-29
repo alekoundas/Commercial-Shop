@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Commercial_Shop_Front_End
 {
-    public partial class Form1 : Form
+    public partial class CommercialStore : Form
     {
-        public Form1()
+        public CommercialStore()
         {
             InitializeComponent();
         }
