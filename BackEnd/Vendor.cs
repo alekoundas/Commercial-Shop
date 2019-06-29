@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace BackEnd
 {
-    class Vendor
+    public class Vendor
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public double Commision { get; set; }
+        public Vendor(string fname, string lname, double commision)
+        {
+            FirstName = fname;
+            LastName = lname;
+            Commision = commision;
+        }
     }
 }

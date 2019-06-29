@@ -79,6 +79,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Add To Shoping Cart";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.AddToCart);
             // 
             // Purchase
             // 
@@ -89,7 +90,7 @@
             this.Purchase.Text = "Purchase";
             this.Purchase.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // CommercialStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,7 +101,7 @@
             this.Controls.Add(this.ItemsListBoxLabel);
             this.Controls.Add(this.ShoppingCartListBox);
             this.Controls.Add(this.ItemsListBox);
-            this.Name = "Form1";
+            this.Name = "CommercialStore";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
