@@ -22,15 +22,16 @@ namespace Commercial_Shop_Front_End
             Store store = Store.Instance;
             InitializeComponent();
             SyntheticData();
-            ItemsBinding.DataSource = store.Items;
+            ItemsBinding.DataSource = store.Items.Distinct().ToList();
             ItemsListBox.DataSource = ItemsBinding;
 
-            //ItemsListBox.DisplayMember = "Display";
+            ItemsListBox.DisplayMember = "Display";
             ItemsListBox.ValueMember = "Display";
 
-            CartItemsBinding.DataSource = store.ShoppingCart;
+            CartItemsBinding.DataSource = store.ShoppingCart.Distinct().ToList();
             ShoppingCartListBox.DataSource = CartItemsBinding;
-            ShoppingCartListBox.ValueMember = "Display";
+            ShoppingCartListBox.DisplayMember = "Count";
+            ShoppingCartListBox.ValueMember = "Count";
 
         }
 
@@ -53,11 +54,15 @@ namespace Commercial_Shop_Front_End
 
         private void AddToCart(object sender, EventArgs e)
         {
-            Store store = Store.Instance;
+            //Store store = Store.Instance;
 
-            store.ShoppingCart.Add((Item)ItemsListBox.SelectedItem);
+            //if (ShoppingCartListBox.Items.Contains(ItemsListBox.SelectedItem))
+            //{
+            //    store.ShoppingCart.Where(x => x.Title == ItemsListBox.SelectedItem.);
+            //}
+            Store.Instance.ShoppingCart.Add((Item)ItemsListBox.SelectedItem);
 
-            CartItemsBinding.ResetBindings(false);
+            CartItemsBinding.ResetBindings(true);
            
         }
     }

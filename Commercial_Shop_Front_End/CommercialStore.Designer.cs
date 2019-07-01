@@ -34,6 +34,7 @@
             this.ShopingCartItemsListBoxLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Purchase = new System.Windows.Forms.Button();
+            this.TotalAmountLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ItemsListBox
@@ -49,7 +50,7 @@
             this.ShoppingCartListBox.FormattingEnabled = true;
             this.ShoppingCartListBox.Location = new System.Drawing.Point(497, 111);
             this.ShoppingCartListBox.Name = "ShoppingCartListBox";
-            this.ShoppingCartListBox.Size = new System.Drawing.Size(291, 212);
+            this.ShoppingCartListBox.Size = new System.Drawing.Size(469, 212);
             this.ShoppingCartListBox.TabIndex = 1;
             // 
             // ItemsListBoxLabel
@@ -90,11 +91,21 @@
             this.Purchase.Text = "Purchase";
             this.Purchase.UseVisualStyleBackColor = true;
             // 
+            // TotalAmountLabel
+            // 
+            this.TotalAmountLabel.AutoSize = true;
+            this.TotalAmountLabel.Location = new System.Drawing.Point(497, 399);
+            this.TotalAmountLabel.Name = "TotalAmountLabel";
+            this.TotalAmountLabel.Size = new System.Drawing.Size(49, 13);
+            this.TotalAmountLabel.TabIndex = 6;
+            this.TotalAmountLabel.Text = "Total: 0$";
+            // 
             // CommercialStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(978, 450);
+            this.Controls.Add(this.TotalAmountLabel);
             this.Controls.Add(this.Purchase);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ShopingCartItemsListBoxLabel);
@@ -116,6 +127,7 @@
         private System.Windows.Forms.Label ShopingCartItemsListBoxLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Purchase;
+        private System.Windows.Forms.Label TotalAmountLabel;
     }
 }
 

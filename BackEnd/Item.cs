@@ -14,7 +14,18 @@ namespace BackEnd
         public bool Sold { get; set; } = false;
         public bool PaymentDistributed { get; set; } = false;
 
-        //Reflection
+
+        //Reflection For Output Shopping Cart Count
+        public string Count
+        {
+            get
+            {
+                                                                            // From Sigleton Pattern \\
+                return String.Format($"{Title}    -    ${Price}       x" + (Store.Instance.ShoppingCart.Where(x=>x.Title==Title).Count()));
+            }
+        }
+
+        //Reflection For Output Items
         public string Display
         {
             get
